@@ -6,7 +6,7 @@ function Card(id, illus) {
   this.flippedCount = 0;
 }
 
-export const suffleCards = cards => {
+export const shuffleCards = cards => {
   for (let i = cards.length - 1; i > 0; i--) {
     const j = Math.floor(Math.random() * (i + 1));
     [cards[i], cards[j]] = [cards[j], cards[i]];
@@ -31,7 +31,7 @@ export const setUpCards = pairsN => {
     return new Card(index, illus);
   });
 
-  return suffleCards(cards);
+  return shuffleCards(cards);
 };
 
 export const calculateGameDuration = (startDate, endDate = null) => {

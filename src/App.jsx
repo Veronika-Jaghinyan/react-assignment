@@ -1,10 +1,10 @@
 import { useEffect, useState } from 'react';
 import Layout from './layout';
 import GameStats from './components/molecule/GameStats';
-import GameBoard from './components/organizm/GameBoard';
+import GameBoard from './components/organism/GameBoard';
 import GameFooter from './components/molecule/GameFooter';
-import Levels from './components/organizm/Levels';
-import Win from './components/organizm/Win';
+import Levels from './components/organism/Levels';
+import Win from './components/organism/Win';
 import { setUpCards } from './utils';
 import './App.css';
 
@@ -137,7 +137,7 @@ function App() {
 
   useEffect(() => {
     if (flippedCards.length > 2) {
-      // Close previuosly opened cards if the third card is flipped before closing the previous 2 (1 sec wait time before closing cards)
+      // Close previously opened cards if the third card is flipped before closing the previous 2 (1 sec wait time before closing cards)
       closeAdditionalCards();
     } else if (flippedCards.length === 2) {
       // Check for match if 2 cards are open
